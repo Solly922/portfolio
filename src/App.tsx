@@ -1,24 +1,21 @@
-import { useState } from "react";
 import { ThemeProvider } from "./components/theme-provider";
 import "./App.css";
+import Topbar from "./components/topbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <ThemeProvider
       defaultTheme="dark"
       storageKey="vite-ui-theme"
     >
-      <div className="border border-foreground">
+      <Topbar />
+      <div className="container h-fit md:py-18 grow">
+        {/* <main className="pt-12 pb-12 grow "> */}
         <h1>Hello World!</h1>
+        {/* </main> */}
       </div>
     </ThemeProvider>
   );
 }
 
 export default App;
-
-// #9cc6e6
-// #0d0101
-// #cecef5
