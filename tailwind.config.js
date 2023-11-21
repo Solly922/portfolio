@@ -69,13 +69,7 @@ module.exports = {
         fall: {
           to: { transform: "translate3d(-30em, 0, 0)" },
         },
-        "tail-fade": {
-          "0%": { width: "6em", opacity: 1 },
-          "50%": { width: "6em", opacity: 1 },
-          "70%": { width: 0, opacity: 0.4 },
-          "80%": { width: 0, opacity: 0.4 },
-          "100%": { width: 0, opacity: 0 },
-        },
+        "tail-fade": {},
         blink: {
           "50%": { opacity: 0.6 },
         },
