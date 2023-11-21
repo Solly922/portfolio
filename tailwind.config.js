@@ -1,12 +1,13 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -65,12 +66,28 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        fall: {
+          to: { transform: "translate3d(-30em, 0, 0)" },
+        },
+        "tail-fade": {
+          "0%": { width: "6em", opacity: 1 },
+          "50%": { width: "6em", opacity: 1 },
+          "70%": { width: 0, opacity: 0.4 },
+          "80%": { width: 0, opacity: 0.4 },
+          "100%": { width: 0, opacity: 0 },
+        },
+        blink: {
+          "50%": { opacity: 0.6 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        fall: "fall 9s linear infinite",
+        "tail-fade": "tail-fade 9s ease-out infinite",
+        blink: "blink 2s linear infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
