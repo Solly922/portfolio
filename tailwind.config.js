@@ -69,7 +69,11 @@ module.exports = {
         fall: {
           to: { transform: "translate3d(-30em, 0, 0)" },
         },
-        "tail-fade": {},
+        "tail-fade": {
+          "0%, 50": { opacity: 1 },
+          "70%, 80%": { opacity: 0.4 },
+          "100%": { opacity: 0 },
+        },
         blink: {
           "50%": { opacity: 0.6 },
         },
@@ -77,8 +81,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        fall: "fall 9s linear infinite",
-        "tail-fade": "tail-fade 9s ease-out infinite",
+        fall: "fall linear infinite",
+        "tail-fade": "tail-fade ease-out infinite",
         blink: "blink 2s linear infinite",
       },
     },

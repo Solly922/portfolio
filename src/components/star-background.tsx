@@ -42,9 +42,12 @@ function Star() {
         width: `${starTailLength}em`,
         transform: `translate3d(104em, 0, 0)`,
       }}
-      className={`absolute left-0 h-[2px] bg-gradient-to-r text-lime-500 from-current to-transparent rounded-full animate-fall duration-[${fallDuration}s] linear repeat-infinite`}
+      className={`absolute left-0 h-[2px] bg-gradient-to-r from-current to-transparent rounded-full animate-[fall_10s_linear_infinite]`}
     >
-      Hello
+      <div
+        className={`w-full bg-gradient-to-r text-red-500 from-current to-transparent rounded-full`}
+      ></div>
+      <div className="animate-blink">Hello</div>
     </div>
   );
 }

@@ -619,6 +619,10 @@ body {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: sticky;
 }
@@ -730,6 +734,34 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+.animate-\[fall_10s_linear_infinite\] {
+  animation: fall 10s linear infinite;
+}
+
+@keyframes tail-fade {
+  0%, 50 {
+    opacity: 1;
+  }
+
+  70%, 80% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-\[tail-fade_1s_linear_infinite\] {
+  animation: tail-fade 1s linear infinite;
+}
+
 @keyframes blink {
   50% {
     opacity: 0.6;
@@ -747,28 +779,45 @@ body {
 }
 
 .animate-fall {
-  animation: fall 9s linear infinite;
+  animation: fall linear infinite;
 }
 
 @keyframes tail-fade {
+  0%, 50 {
+    opacity: 1;
+  }
+
+  70%, 80% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .animate-tail-fade {
-  animation: tail-fade 9s ease-out infinite;
+  animation: tail-fade ease-out infinite;
 }
 
-@keyframes accordion-down {
-  from {
-    height: 0;
-  }
-
+@keyframes fall {
   to {
-    height: var(--radix-accordion-content-height);
+    transform: translate3d(-30em, 0, 0);
   }
 }
 
-.animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
+.animate-\[fall_tail-fade_10s_linear_infinite\] {
+  animation: fall tail-fade 10s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+.animate-\[fall__10s_linear_infinite\] {
+  animation: fall  10s linear infinite;
 }
 
 .cursor-not-allowed {
@@ -975,6 +1024,16 @@ body {
   color: hsl(var(--secondary-foreground));
 }
 
+.text-cyan-500 {
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .decoration-primary {
   text-decoration-color: hsl(var(--primary));
 }
@@ -1042,10 +1101,6 @@ body {
 
 .ease-out {
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.repeat-infinite {
-  animation-iteration-count: infinite;
 }
 
 @media (min-width: 1024px) {
