@@ -1,4 +1,4 @@
-const numOfStars = 1;
+const numOfStars = 50;
 const STAR_COLOR = "text-primary";
 const STAR_TAIL_LENGTH = "6em";
 const STAR_TAIL_HEIGHT = "2px";
@@ -41,13 +41,28 @@ function Star() {
         top: `${topOffset}vh`,
         width: `${starTailLength}em`,
         transform: `translate3d(104em, 0, 0)`,
+        animationName: "tail-fade, fall",
+        animationDuration: `${fallDuration}s`,
+        animationDelay: `${fallDelay}s`,
       }}
-      className={`absolute left-0 h-[2px] bg-gradient-to-r from-current to-transparent rounded-full animate-[fall_10s_linear_infinite]`}
+      className={
+        "absolute left-0 h-[2px] bg-gradient-to-r from-current to-transparent rounded-full animate-[fall_9s_linear_infinite] filter drop-shadow"
+      }
     >
       <div
-        className={`w-full bg-gradient-to-r text-red-500 from-current to-transparent rounded-full`}
+        style={{
+          left: `calc(-${STAR_WIDTH} / 2)`,
+          width: `${STAR_WIDTH}`,
+        }}
+        className={`absolute h-full top-[5px] bg-gradient-to-r from-current to-transparent rounded-full transform rotate-45 animate-[blink_2s_ease_infinite]`}
       ></div>
-      <div className="animate-blink">Hello</div>
+      <div
+        style={{
+          left: `calc(-${STAR_WIDTH} / 2)`,
+          width: `${STAR_WIDTH}`,
+        }}
+        className={`absolute h-full top-[-5px] bg-gradient-to-r from-current to-transparent rounded-full transform rotate-[-45deg] animate-[blink_2s_ease_infinite]`}
+      ></div>
     </div>
   );
 }

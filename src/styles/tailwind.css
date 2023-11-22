@@ -619,10 +619,6 @@ body {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .sticky {
   position: sticky;
 }
@@ -633,6 +629,42 @@ body {
 
 .top-0 {
   top: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[-1\] {
+  top: -1;
+}
+
+.top-\[0\] {
+  top: 0;
+}
+
+.top-\[1px\] {
+  top: 1px;
+}
+
+.top-\[2px\] {
+  top: 2px;
+}
+
+.top-\[4px\] {
+  top: 4px;
+}
+
+.top-\[5px\] {
+  top: 5px;
+}
+
+.top-\[-5px\] {
+  top: -5px;
 }
 
 .z-40 {
@@ -730,8 +762,23 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-\[-45deg\] {
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-\[blink_2s_ease-linear_infinite\] {
+  animation: blink 2s ease-linear infinite;
 }
 
 @keyframes fall {
@@ -740,26 +787,8 @@ body {
   }
 }
 
-.animate-\[fall_10s_linear_infinite\] {
-  animation: fall 10s linear infinite;
-}
-
-@keyframes tail-fade {
-  0%, 50 {
-    opacity: 1;
-  }
-
-  70%, 80% {
-    opacity: 0.4;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.animate-\[tail-fade_1s_linear_infinite\] {
-  animation: tail-fade 1s linear infinite;
+.animate-\[fall_9s_linear_infinite\] {
+  animation: fall 9s linear infinite;
 }
 
 @keyframes blink {
@@ -800,24 +829,14 @@ body {
   animation: tail-fade ease-out infinite;
 }
 
-@keyframes fall {
-  to {
-    transform: translate3d(-30em, 0, 0);
+@keyframes blink {
+  50% {
+    opacity: 0.6;
   }
 }
 
-.animate-\[fall_tail-fade_10s_linear_infinite\] {
-  animation: fall tail-fade 10s linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translate3d(-30em, 0, 0);
-  }
-}
-
-.animate-\[fall__10s_linear_infinite\] {
-  animation: fall  10s linear infinite;
+.animate-\[blink_2s_ease_infinite\] {
+  animation: blink 2s ease infinite;
 }
 
 .cursor-not-allowed {
@@ -1003,11 +1022,6 @@ body {
   color: hsl(var(--destructive-foreground));
 }
 
-.text-lime-500 {
-  --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
-}
-
 .text-primary {
   color: hsl(var(--primary));
 }
@@ -1022,16 +1036,6 @@ body {
 
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
-}
-
-.text-cyan-500 {
-  --tw-text-opacity: 1;
-  color: rgb(6 182 212 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .decoration-primary {
