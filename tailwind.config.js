@@ -57,6 +57,9 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      dropShadow: {
+        glow: "0 0 2px currentColor",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -77,6 +80,10 @@ module.exports = {
         blink: {
           "50%": { opacity: 0.6 },
         },
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -84,6 +91,7 @@ module.exports = {
         fall: "fall linear infinite",
         "tail-fade": "tail-fade ease-out infinite",
         blink: "blink 2s linear infinite",
+        "fade-in": "fade-in 1s ease-out",
       },
     },
   },

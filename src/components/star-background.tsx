@@ -8,7 +8,7 @@ export default function StarBackground() {
   const stars = Array.from({ length: numOfStars }, (_, i) => <Star key={i} />);
 
   return (
-    <div className="flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]">
+    <div className="absolute flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]">
       <div className="fixed top-0 left-0 w-full h-[120%] transform">
         {stars}
       </div>

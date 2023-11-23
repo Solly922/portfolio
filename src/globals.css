@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground min-h-screen flex flex-col;
+    @apply bg-background text-foreground min-h-screen flex flex-col overflow-hidden;
   }
   #root {
     @apply flex flex-col grow;
