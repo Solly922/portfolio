@@ -8,16 +8,8 @@ export default function StarBackground() {
   const stars = Array.from({ length: numOfStars }, (_, i) => <Star key={i} />);
 
   return (
-    <div
-      style={
-        {
-          // background:
-          //   "radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%)",
-        }
-      }
-      className="flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]"
-    >
-      <div className={`fixed top-0 left-0 w-full h-[120%] transform`}>
+    <div className="flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]">
+      <div className="fixed top-0 left-0 w-full h-[120%] transform">
         {stars}
       </div>
     </div>
@@ -36,7 +28,7 @@ function Star() {
       style={{
         top: `${topOffset}vh`,
         width: `${starTailLength}em`,
-        transform: `translate3d(104em, 0, 0)`,
+        transform: `translate3d(125em, 0, 0)`,
         animationName: "tail-fade, fall",
         animationDuration: `${fallDuration}s`,
         animationDelay: `${fallDelay}s`,

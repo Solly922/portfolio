@@ -688,6 +688,10 @@ body {
   height: 100%;
 }
 
+.h-\[130\%\] {
+  height: 130%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -698,6 +702,14 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[120\%\] {
+  width: 120%;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .flex-1 {
