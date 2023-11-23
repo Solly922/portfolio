@@ -72,7 +72,7 @@ module.exports = {
         "tail-fade": {
           "0%, 50": { opacity: 1 },
           "70%, 80%": { opacity: 0.4 },
-          "100%": { opacity: 0 },
+          "100%": { opacity: 0, width: 0 },
         },
         blink: {
           "50%": { opacity: 0.6 },
