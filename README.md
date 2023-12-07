@@ -1,4 +1,4 @@
 # Solly's Portfolio
 
-Looks like this is still a work in project.
-Check back later
+Currently a work in progress.
+Enjoy the falling stars in the mean time!
