@@ -11,7 +11,7 @@ function App() {
     >
       <StarBackground />
       {/* <Topbar /> */}
-      <div className="container h-fit md:py-18 grow flex">
+      <div className="container min-h-screen md:py-18 grow flex">
         <main className="pt-12 pb-12 grow flex">
           <Main />
         </main>
