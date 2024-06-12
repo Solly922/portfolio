@@ -27,18 +27,13 @@ function FancyCard({
     <div className="w-full relative">
       <Card
         style={{ float: float || "right" }}
-        className={clsx("w-80 h-20")}
+        className={clsx("w-80")}
       >
         <CardHeader>
-          <CardTitle>Notifications</CardTitle>
-          <CardDescription>You have 3 unread messages.</CardDescription>
-        </CardHeader>
-        {/*        <CardHeader>
-          <CardTitle>{header}</CardTitle>
+          <CardTitle className="uppercase">{header}</CardTitle>
 
           {description && <CardDescription>{description}</CardDescription>}
         </CardHeader>
-      */}
 
         <CardContent>{children}</CardContent>
 
