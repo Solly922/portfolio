@@ -3,7 +3,7 @@ import Resume from "@/assets/Solomon-Schuster-Resume.pdf";
 
 function Hero() {
   return (
-    <div className="flex h-96 justify-center items-center grow flex-col gap-10 animate-fade-in">
+    <div className="flex h-[100%] justify-center items-center grow flex-col gap-10 animate-fade-in">
       <div className="text-center space-y-2 tracking-wider">
         <h1 className="text-6xl font-extralight filter drop-shadow-glow">
           Solomon Schuster
