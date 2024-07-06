@@ -1,4 +1,8 @@
 import FancyCard from "@/components/fancy-card";
+import Ingot1 from "@/assets/ingot-1.png";
+import Ingot2 from "@/assets/ingot-2.png";
+
+const ingotImages = [Ingot1, Ingot2];
 
 function Projects() {
   return (
@@ -6,6 +10,7 @@ function Projects() {
       <FancyCard
         header="INGOT"
         description="Lunasonde (source code unavailable)"
+        images={ingotImages}
       >
         <p>
           INGOT is a working proof of concept GIS application that allows
