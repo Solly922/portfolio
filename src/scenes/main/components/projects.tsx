@@ -1,6 +1,6 @@
 import FancyCard from "@/components/fancy-card";
-import Ingot1 from "@/assets/ingot-1.png";
-import Ingot2 from "@/assets/ingot-2.png";
+import Ingot1 from "@/assets/ingot/ingot-1.png";
+import Ingot2 from "@/assets/ingot/ingot-2.png";
 
 const ingotImages = [Ingot1, Ingot2];
 

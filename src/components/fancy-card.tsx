@@ -68,8 +68,8 @@ function FancyCard({
                   })}
                 </CarouselContent>
 
-                {/* <CarouselPrevious /> */}
-                {/* <CarouselNext /> */}
+                <CarouselPrevious className="left-0" />
+                <CarouselNext style={{ right: "0px !important" }} />
               </Carousel>
             </div>
           )}
