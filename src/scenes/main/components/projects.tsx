@@ -7,7 +7,10 @@ const ingotImages = [Ingot1, Ingot2];
 
 function Projects() {
   return (
-    <div className="flex flex-col w-full">
+    <div
+      className="flex flex-col w-full"
+      id="projects"
+    >
       <div className="py-2">
         <h2 className="text-center text-4xl font-extralight filter drop-shadow-glow">
           PROJECTS
@@ -24,9 +27,14 @@ function Projects() {
       >
         <p>
           INGOT is a working proof of concept GIS application that allows
-          <a href="https://lunasonde.com/">Lunasonde</a> to display the data
-          collected by their satellite(s) in a user-friendly, interactive, and
-          informative way.
+          <a
+            href="https://lunasonde.com/"
+            target="_blank"
+          >
+            Lunasonde
+          </a>{" "}
+          to display the data collected by their satellite(s) in a
+          user-friendly, interactive, and informative way.
         </p>
       </FancyCard>
     </div>

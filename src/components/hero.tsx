@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Resume from "@/assets/Solomon-Schuster-Resume.pdf";
+import { ArrowDown } from "lucide-react";
 
 function Hero() {
   return (
@@ -14,6 +15,20 @@ function Hero() {
       <div>
         <a href={Resume}>
           <Button variant="outline">Resume</Button>
+        </a>
+      </div>
+
+      <div className="absolute bottom-10">
+        <a href="#projects">
+          <Button
+            variant="ghost"
+            className="rounded-full p-1"
+          >
+            <ArrowDown
+              size={48}
+              strokeWidth={1}
+            />
+          </Button>
         </a>
       </div>
     </div>
