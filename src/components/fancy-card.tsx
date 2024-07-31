@@ -19,9 +19,9 @@ import { memo } from "react";
 
 const dividerStyles = {
   primaryLeft:
-    "[mask-image:radial-gradient(140px_at_left,white,transparent)] left-0 bg-gradient-to-r",
+    "[mask-image:radial-gradient(130px_at_left,white,transparent)] left-0 bg-gradient-to-r",
   primaryRight:
-    "[mask-image:radial-gradient(140px_at_right,white,transparent)] right-0 bg-gradient-to-l",
+    "[mask-image:radial-gradient(130px_at_right,white,transparent)] right-0 bg-gradient-to-l",
   secondaryLeft:
     "[mask-image:radial-gradient(65px_at_left,white,transparent)] left-0 bg-gradient-to-r ",
   secondaryRight:
@@ -54,7 +54,7 @@ function FancyCard({
   children,
 }: FancyCardProps) {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative py-10">
       <Sparkles />
       <Card
         style={{ float: float || "right" }}
@@ -111,13 +111,13 @@ function Sparkles({ float }: { float?: "left" | "right" }) {
   return (
     <div
       className={clsx(
-        "absolute -z-30 top-[50%] -translate-y-[50%] h-full bg-gradient-to-b from-transparent from [5%] to-[95%] via-indigo-500 to-transparent",
+        "absolute h-full w-px -z-30 top-0 bg-gradient-to-b from-transparent from [5%] to-[98%] via-indigo-300 to-transparent",
         float === "left" ? "left-0" : "right-0"
       )}
     >
       <div
         className={clsx(
-          "w-28 h-full absolute top-1/2 -translate-y-1/2 from-indigo-400 via-transparent to-transparent -z-10 opacity-50",
+          "w-28 h-full absolute top-1/2 -translate-y-1/2 from-indigo-400 via-transparent to-transparent -z-10 opacity-30",
           float === "left"
             ? dividerStyles.primaryLeft
             : dividerStyles.primaryRight
@@ -125,7 +125,7 @@ function Sparkles({ float }: { float?: "left" | "right" }) {
       />
       <div
         className={clsx(
-          "w-10 h-1/2 absolute top-1/2 -translate-y-1/2 from-cyan-400 via-transparent to-transparent -z-20 opacity-100",
+          "w-10 h-1/2 absolute top-1/2 -translate-y-1/2 from-cyan-400 via-transparent to-transparent -z-20 opacity-50",
           float === "left"
             ? dividerStyles.secondaryLeft
             : dividerStyles.secondaryRight
