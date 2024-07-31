@@ -87,6 +87,7 @@ function FancyCard({
                         <img
                           src={img}
                           alt={`image-${i}`}
+                          loading="lazy"
                         />
                       </CarouselItem>
                     );
