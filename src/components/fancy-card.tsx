@@ -58,7 +58,10 @@ function FancyCard({
       <Sparkles />
       <Card
         style={{ float: float || "right" }}
-        className={clsx("max-w-[1000px]", float === "left" ? "ml-10" : "mr-10")}
+        className={clsx(
+          "max-w-[1000px] bg-background",
+          float === "left" ? "ml-10" : "mr-10"
+        )}
       >
         <CardHeader>
           <CardTitle className="uppercase">{header}</CardTitle>
@@ -144,7 +147,6 @@ function Sparkles({ float }: { float?: "left" | "right" }) {
           minSize={0.1}
           maxSize={1}
           particleDensity={1200}
-          // particleColor="#d34"
           className={clsx("h-full")}
         />
       </div>
