@@ -26,7 +26,7 @@ function Projects() {
         images={ingotImages}
       >
         <p>
-          INGOT is a working proof of concept GIS application that allows
+          INGOT is a working proof of concept GIS application that allows{" "}
           <a
             href="https://lunasonde.com/"
             target="_blank"
