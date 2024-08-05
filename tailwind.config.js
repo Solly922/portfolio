@@ -89,6 +89,10 @@ module.exports = {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
         },
+        bounce: {
+          "0%, 100%": { transform: "translateY(-10%)" },
+          "50%": { transform: "translateY(15%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -98,6 +102,7 @@ module.exports = {
         blink: "blink 2s ease-in-out infinite",
         "fade-in": "fade-in 1s ease-out",
         "fade-out": "fade-out 1s ease-out",
+        bounce: "bounce 1s ease-in-out infinite",
       },
     },
   },

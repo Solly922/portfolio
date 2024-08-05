@@ -40,7 +40,7 @@ export interface FancyCardProps {
   children?: React.ReactNode;
   float?: "left" | "right";
   header: string;
-  description?: string;
+  description?: React.ReactNode;
   footer?: string;
   images?: string[];
 }
@@ -55,11 +55,11 @@ function FancyCard({
 }: FancyCardProps) {
   return (
     <div className="w-full relative py-10">
-      <Sparkles />
+      <Sparkles float={float} />
       <Card
         style={{ float: float || "right" }}
         className={clsx(
-          "max-w-[1000px] bg-background",
+          "max-w-[900px] bg-background",
           float === "left" ? "ml-10" : "mr-10"
         )}
       >
@@ -71,7 +71,7 @@ function FancyCard({
 
         <CardContent className="flex gap-2">
           <div
-            className=""
+            className="w-3/5"
             id="content"
           >
             {children}
@@ -88,6 +88,7 @@ function FancyCard({
                           src={img}
                           alt={`image-${i}`}
                           loading="lazy"
+                          className="min-h-[300px] object-contain"
                         />
                       </CarouselItem>
                     );

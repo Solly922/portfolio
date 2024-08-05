@@ -21,24 +21,61 @@ function Projects() {
       </div>
 
       <FancyCard
-        header="INGOT"
-        description="Lunasonde (source code unavailable)"
+        header="INGOT (MVP)"
+        description={
+          <Description
+            link={"https://lunasonde.com"}
+            linkText="Lunasonde"
+          />
+        }
         images={ingotImages}
       >
         <p>
-          INGOT is a working proof of concept GIS application that allows{" "}
-          <a
-            href="https://lunasonde.com/"
-            target="_blank"
-          >
-            Lunasonde
-          </a>{" "}
-          to display the data collected by their satellite(s) in a
-          user-friendly, interactive, and informative way.
+          A GIS application that takes data from Lunsonde's satellite(s) and
+          displays it in an interactive and informative way. The maps display a
+          representation of subsurface water content and other material
+          properties from below the Earth's surface.
         </p>
+      </FancyCard>
+
+      <FancyCard
+        header="Compliance+"
+        description={
+          <Description
+            link="https://j2labs.com"
+            linkText="J2Labs"
+          />
+        }
+        images={ingotImages}
+        float="left"
+      >
+        <p>This is a test</p>
       </FancyCard>
     </div>
   );
 }
 
 export default Projects;
+
+function Description({
+  link,
+  linkText,
+  sourceCode,
+}: {
+  link: string;
+  linkText: string;
+  sourceCode?: string;
+}) {
+  return (
+    <>
+      <a
+        href={link}
+        target="_blank"
+        className="anchor"
+      >
+        {linkText}
+      </a>{" "}
+      <span>{sourceCode ? sourceCode : "(source code unavailable)"}</span>
+    </>
+  );
+}

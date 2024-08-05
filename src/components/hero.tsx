@@ -9,7 +9,7 @@ function Hero() {
         <h1 className="text-6xl font-extralight filter drop-shadow-glow">
           Solomon Schuster
         </h1>
-        <h3 className="text-xl">Software Engineer</h3>
+        <h3 className="text-xl">Software Developer</h3>
       </div>
 
       <div>
@@ -22,9 +22,10 @@ function Hero() {
         <a href="#projects">
           <Button
             variant="ghost"
-            className="rounded-full p-1"
+            className="rounded-full h-16 w-16 p-0"
           >
             <ArrowDown
+              className="animate-bounce"
               size={48}
               strokeWidth={1}
             />
