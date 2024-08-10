@@ -29,6 +29,7 @@ function Projects() {
           />
         }
         images={ingotImages}
+        float="right"
       >
         <p>
           A GIS application that takes data from Lunsonde's satellite(s) and
@@ -49,7 +50,42 @@ function Projects() {
         images={ingotImages}
         float="left"
       >
-        <p>This is a test</p>
+        <p>
+          A new and modern way to track, schedule, and manage drug/alcohol
+          tests. This application allows J2Labs to maintain compliance with DOT
+          standards and regulations by automating several tasks such as document
+          generation and emailing. One of the key features of this application
+          is the ability to do large scale 'random selections' for alcohol and
+          drug tests.
+        </p>
+      </FancyCard>
+
+      <FancyCard
+        header="Adiuvo Boards"
+        description="Adiuvo"
+        images={[]}
+        float="right"
+      >
+        <p>
+          An application for touch screen kiosks that allows users to view and
+          interact with a variety of information. There are several different
+          types of boards that can be displayed, such as a directory board,
+          which would be used in a large building to help people find their way
+          around. The application focuses on being user-friendly and performant.
+        </p>
+      </FancyCard>
+
+      <FancyCard
+        header="AD-PROTO"
+        description="Adiuvo"
+        images={[]}
+        float="left"
+      >
+        <p>
+          An advertising platform that allows businesses to utilize ad space on
+          their Adiuvo Boards to generate revenue. The system tracks metrics
+          such as estimated playtime, number of views, and prime time windows.
+        </p>
       </FancyCard>
     </div>
   );
