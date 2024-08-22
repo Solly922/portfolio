@@ -5,10 +5,8 @@ function Main() {
   return (
     <div className="flex flex-col w-full">
       <Hero />
-      {/* 
 
-      <Projects / >
-      */}
+      <Projects />
     </div>
   );
 }

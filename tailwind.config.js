@@ -70,7 +70,8 @@ module.exports = {
           to: { height: 0 },
         },
         fall: {
-          to: { transform: "translate3d(-30em, 0, 0)" },
+          from: { opacity: 1 },
+          to: { transform: "translate3d(-30em, 0, 0)", opacity: 0 },
         },
         "tail-fade": {
           "0%, 50": { opacity: 1 },
@@ -78,11 +79,19 @@ module.exports = {
           "100%": { opacity: 0, width: 0 },
         },
         blink: {
-          "50%": { opacity: 0.6 },
+          "50%": { opacity: 0.4, width: "-10%" },
         },
         "fade-in": {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
+        },
+        "fade-out": {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+        bounce: {
+          "0%, 100%": { transform: "translateY(-10%)" },
+          "50%": { transform: "translateY(15%)" },
         },
       },
       animation: {
@@ -90,8 +99,10 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         fall: "fall linear infinite",
         "tail-fade": "tail-fade ease-out infinite",
-        blink: "blink 2s linear infinite",
+        blink: "blink 2s ease-in-out infinite",
         "fade-in": "fade-in 1s ease-out",
+        "fade-out": "fade-out 1s ease-out",
+        bounce: "bounce 1s ease-in-out infinite",
       },
     },
   },

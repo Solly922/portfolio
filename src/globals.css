@@ -70,10 +70,24 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground min-h-screen flex flex-col overflow-hidden;
+
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground min-h-screen flex flex-col overflow-x-hidden;
+  }
+
   #root {
     @apply flex flex-col grow;
+  }
+
+  /* a { */
+  /*   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600; */
+  /* } */
+
+  .anchor {
+    @apply underline hover:no-underline visited:text-slate-600;
   }
 }
