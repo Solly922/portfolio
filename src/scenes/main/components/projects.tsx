@@ -1,9 +1,13 @@
 import FancyCard from "@/components/fancy-card";
 import Ingot1 from "@/assets/ingot/ingot-1.png";
 import Ingot2 from "@/assets/ingot/ingot-2.png";
+import Adiuvo1 from "@/assets/adiuvo/1.png";
+import Adiuvo2 from "@/assets/adiuvo/2.png";
+import Adiuvo3 from "@/assets/adiuvo/3.png";
 import { Separator } from "@/components/ui/separator";
 
 const ingotImages = [Ingot1, Ingot2];
+const adiuvoImages = [Adiuvo1, Adiuvo2, Adiuvo3];
 
 function Projects() {
   return (
@@ -47,7 +51,7 @@ function Projects() {
             linkText="J2Labs"
           />
         }
-        images={ingotImages}
+        images={[]}
         float="left"
       >
         <p>
@@ -63,7 +67,7 @@ function Projects() {
       <FancyCard
         header="Adiuvo Boards"
         description="Adiuvo"
-        images={[]}
+        images={adiuvoImages}
         float="right"
       >
         <p>

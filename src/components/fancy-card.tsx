@@ -16,6 +16,7 @@ import {
 import { clsx } from "clsx";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { memo } from "react";
+import { ImageIcon, CircleSlash2Icon } from "lucide-react";
 
 const dividerStyles = {
   primaryLeft:
@@ -80,20 +81,40 @@ function FancyCard({
           {images && (
             <div className="w-full ml-10">
               <Carousel className="h-full w-full">
-                <CarouselContent>
-                  {images.map((img, i) => {
-                    return (
-                      <CarouselItem key={img}>
-                        <img
-                          src={img}
-                          alt={`image-${i}`}
-                          loading="lazy"
-                          className="min-h-[300px] object-contain"
+                {images.length > 0 ? (
+                  <CarouselContent>
+                    {images.map((img, i) => {
+                      return (
+                        <CarouselItem key={img}>
+                          <img
+                            src={img}
+                            alt={`image-${i}`}
+                            loading="lazy"
+                            className="min-h-[300px] object-contain"
+                          />
+                        </CarouselItem>
+                      );
+                    })}
+                  </CarouselContent>
+                ) : (
+                  <CarouselContent>
+                    <CarouselItem className="flex justify-center items-center h-full">
+                      <div className="w-full min-h-[300px] text-center">
+                        <CircleSlash2Icon
+                          size={100}
+                          strokeWidth={1}
+                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-300"
                         />
-                      </CarouselItem>
-                    );
-                  })}
-                </CarouselContent>
+                        <ImageIcon
+                          size={60}
+                          strokeWidth={1}
+                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-300"
+                        />
+                        <p className="text-gray-300">No images available</p>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                )}
 
                 <CarouselPrevious className="left-0" />
                 <CarouselNext style={{ right: "0px" }} />
