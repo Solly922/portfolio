@@ -99,7 +99,7 @@ function FancyCard({
                 ) : (
                   <CarouselContent>
                     <CarouselItem className="flex justify-center items-center h-full">
-                      <div className="w-full min-h-[300px] text-center">
+                      <div className="w-full min-h-[150px] text-center">
                         <CircleSlash2Icon
                           size={100}
                           strokeWidth={1}
