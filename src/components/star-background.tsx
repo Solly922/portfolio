@@ -15,7 +15,6 @@ function checkPerformance() {
   }
 
   const duration = performance.now() - start;
-  console.log("duration: ", duration);
 
   if (duration < 2) {
     return "high"; // high performance
@@ -28,7 +27,6 @@ function checkPerformance() {
 
 export default function StarBackground() {
   const perf = useMemo(() => checkPerformance(), []);
-  console.log("performance: ", perf);
   if (perf === "high") {
     numOfStars = 50;
   } else if (perf === "medium") {
