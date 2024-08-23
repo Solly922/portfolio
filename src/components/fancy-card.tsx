@@ -70,16 +70,16 @@ function FancyCard({
           {description && <CardDescription>{description}</CardDescription>}
         </CardHeader>
 
-        <CardContent className="flex gap-2">
+        <CardContent className="flex gap-8 flex-col md:flex-row text-sm sm:text-lg">
           <div
-            className="w-3/5"
+            className="w-full md:w-3/5"
             id="content"
           >
             {children}
           </div>
 
           {images && (
-            <div className="w-full ml-10">
+            <div className="w-full">
               <Carousel className="h-full w-full">
                 {images.length > 0 ? (
                   <CarouselContent>
@@ -90,7 +90,7 @@ function FancyCard({
                             src={img}
                             alt={`image-${i}`}
                             loading="lazy"
-                            className="min-h-[300px] object-contain"
+                            className="object-contain"
                           />
                         </CarouselItem>
                       );
@@ -99,7 +99,7 @@ function FancyCard({
                 ) : (
                   <CarouselContent>
                     <CarouselItem className="flex justify-center items-center h-full">
-                      <div className="w-full min-h-[300px] text-center">
+                      <div className="w-full min-h-[150px] text-center">
                         <CircleSlash2Icon
                           size={100}
                           strokeWidth={1}
