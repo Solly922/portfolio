@@ -8,8 +8,8 @@ export default function StarBackground() {
   const stars = Array.from({ length: numOfStars }, (_, i) => <Star key={i} />);
 
   return (
-    <div className="absolute flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]">
-      <div className="fixed top-0 left-0 w-full h-[120%] transform">
+    <div className="fixed flex transform rotate-[-45deg] items-center justify-center min-h-screen w-full z-[-1]">
+      <div className="absolute top-0 left-0 w-full h-full transform">
         {stars}
       </div>
     </div>
@@ -41,7 +41,7 @@ function Star() {
     >
       <div
         style={{
-          left: `calc(-${starWidth}em / 2)`,
+          // left: `calc(-${starWidth}em / 2)`,
           width: `${starWidth}em`,
           background:
             "linear-gradient(45deg, transparent, currentColor, transparent )",
@@ -50,7 +50,7 @@ function Star() {
       ></div>
       <div
         style={{
-          left: `calc(-${starWidth}em / 2)`,
+          // left: `calc(-${starWidth}em / 2)`,
           width: `${starWidth}em`,
           background:
             "linear-gradient(45deg, transparent, currentColor, transparent )",
