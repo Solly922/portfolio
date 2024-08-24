@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Resume from "@/assets/Solomon-Schuster-Resume.pdf";
+// import Resume from "@/assets/Solomon-Schuster-Resume.pdf";
 import { ArrowDown } from "lucide-react";
 
 function Hero() {
@@ -13,11 +13,11 @@ function Hero() {
           <h3 className="text-xl">Software Developer</h3>
         </div>
 
-        <div>
-          <a href={Resume}>
-            <Button variant="outline">Resume</Button>
-          </a>
-        </div>
+        {/* <div> */}
+        {/*   <a href={Resume}> */}
+        {/*     <Button variant="outline">Resume</Button> */}
+        {/*   </a> */}
+        {/* </div> */}
       </div>
 
       <div className="bottom-10 self-end m-auto">

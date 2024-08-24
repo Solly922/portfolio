@@ -17,7 +17,7 @@ function Projects() {
     >
       <div className="py-2">
         <h2 className="text-center text-4xl font-extralight filter drop-shadow-glow">
-          PROJECTS
+          PROJECTS/EXPERIENCE
         </h2>
       </div>
       <div className="[mask-image:radial-gradient(250px_at_top,white,transparent)]">
